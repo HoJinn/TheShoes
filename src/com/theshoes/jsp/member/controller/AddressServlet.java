@@ -22,7 +22,7 @@ public class AddressServlet extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
 		AddressService addressService = new AddressService();
-		/* 배송지 삭제 */
+		/* 배송지 삭제 삭제*/
 		if(request.getParameter("delete") != null) {
 			int result = addressService.deletAddress(request.getParameter("delete"));
 			

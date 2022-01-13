@@ -79,7 +79,7 @@
 		
 		<association property="shoes" resultMap="shoesResultMap" />
 	</resultMap>
-	 
+	 <!-- 리셀 내역 불러오기 -->
 	 <select id = "selectSaleslList" resultMap = "salesHistoryResultMap" > 
 	     SELECT /* com.theshoes.jsp.board.model.dao.BoardDAO#selectAllNoticeList() */
                 A.RNUM

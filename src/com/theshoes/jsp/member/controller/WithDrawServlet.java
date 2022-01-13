@@ -14,6 +14,7 @@ import com.google.gson.Gson;
 import com.theshoes.jsp.member.model.dto.MemberDTO;
 import com.theshoes.jsp.member.model.serivce.MemberService;
 
+/* 회원탈퇴 */
 @WebServlet("/myPage/withDraw")
 public class WithDrawServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;

@@ -22,7 +22,7 @@ public class AddressServlet extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
 		AddressService addressService = new AddressService();
-		/* 배송지 삭제 삭제*/
+		/* 배송지 삭제*/
 		if(request.getParameter("delete") != null) {
 			int result = addressService.deletAddress(request.getParameter("delete"));
 			
@@ -40,7 +40,7 @@ public class AddressServlet extends HttpServlet {
 		/* 전체 주소록 조회 */ 
 		List<AddressDTO> addressList = new AddressService().selectAllAddressList(id);
 		
-		/* 이것도 3번보기 list size + "" addressCT로 넘어간다. */ 
+		/* list size + "" addressCT로 넘어간다. */ 
 		request.setAttribute("addressCT", addressList.size()+"");
 		SelectCriteria selectCriteria = null;
 		

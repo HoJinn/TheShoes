@@ -20,7 +20,7 @@ public class MypageService {
 	}
 
 	
-	/* 판매내역 조회 리스트 */
+	/* 판매내역 리스트 조회 */
 	public List<ResellListDTO> salesHistorylList(SelectCriteria selectCriteria) {
 		
 		SqlSession session = getSqlSession();

@@ -10,7 +10,7 @@
 		<result property="addressName" column="ADDRESS_NAME"/>
 	</resultMap>
 	
-
+	/* 주소록 추가 */
 	<insert id="insertAddress" parameterType="com.theshoes.jsp.member.model.dto.AddressDTO">
         INSERT /* com.theshoes.jsp.member.model.dao.AddressDAO#insertAddress() */
           INTO ADDRESS A
@@ -31,6 +31,7 @@
         )
 	</insert>
 	
+	/* 주소록 조회 */ 
 	<select id="selectAllAddressList" resultMap="addressResultMap" parameterType="string">
 		SELECT   /* com.theshoes.jsp.member.model.dao.AddressDAO#selectAllAddressList() */
        		 A.ADDRESS_NO 
@@ -42,7 +43,8 @@
       	  JOIN MEMBER B ON(B.MEMBER_ID = A.ADDRESS_ID)
       	 WHERE B.MEMBER_ID = #{ id }
 	</select>
-
+	
+	/* 주소록 수정 */
 	<update id="updateAddress"  parameterType="com.theshoes.jsp.member.model.dto.AddressDTO" >
         UPDATE /* com.theshoes.jsp.board.model.dao.BoardDAO#updateAddress */
                 ADDRESS A
@@ -52,6 +54,7 @@
     	  WHERE A.ADDRESS_NO = #{ addressNo }
 	</update>
 	
+	/*주소록 삭제*/
 	<delete id="deleteAddress">
 		DELETE
 		  FROM ADDRESS A

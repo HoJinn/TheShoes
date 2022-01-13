@@ -88,7 +88,7 @@ public class MemberService {
 		
 		return result;
 	}
-	/*  */ 
+	/* 회원탈퇴 */ 
 	public int withDraw(MemberDTO member) {
 		SqlSession session = getSqlSession();
 		

@@ -11,16 +11,13 @@ import com.theshoes.jsp.board.model.dto.BoardDTO;
 
 public class MyPageDAO {
 
-	/* 판매내역 */ 
+	/* 리셀내역 조회 */ 
 	public List<ResellListDTO> selectSaleslList(SqlSession session, SelectCriteria selectCriteria) {
 		return session.selectList("MyPageDAO.selectSaleslList", selectCriteria);
 	}
-
 	public int selectSalesHistoryTotalCount(SqlSession session) {
 		return session.selectOne("MyPageDAO.selectSalesHistoryTotalCount");
 	}
-	
-	/* 판매내역 */ 
 	public List<BoardDTO> selectResellList(SqlSession session) {
 		return null;
 	}

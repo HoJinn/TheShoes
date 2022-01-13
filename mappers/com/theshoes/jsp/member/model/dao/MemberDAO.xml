@@ -135,6 +135,7 @@
          WHERE A.MEMBER_ID = #{ id }
 	</update>
 	
+	/* 회원정보 수정 */
 	<update id="withDraw" parameterType="com.theshoes.jsp.member.model.dto.MemberDTO">
 		UPDATE MEMBER A /* com.theshoes.jsp.member.model.dao.MemberDAO#withDraw() */
            SET A.WITHDRAW_YN = 'Y'

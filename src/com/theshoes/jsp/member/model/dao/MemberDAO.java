@@ -24,7 +24,7 @@ public class MemberDAO {
 	public int passwordChange(SqlSession session, MemberDTO member) {
 		return session.update("MemberDAO.passwordChange", member);
 	}
-	/* 회원정보 수정*/
+	/* 회원탈퇴 */
 	public int withDraw(SqlSession session, MemberDTO member) {
 		return session.update("MemberDAO.withDraw", member);
 	}
@@ -32,7 +32,7 @@ public class MemberDAO {
 	public MemberDTO selectAllWishList(SqlSession session, String id) {
 		return session.selectOne("MemberDAO.selectAllWishList", id);
 	}
-	/* 회원탈퇴 */
+	
 	public int deleteWish(SqlSession session, String wishNo) {
 		return session.delete("MemberDAO.deleteWish", wishNo);
 	}
